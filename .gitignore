@@ -1,0 +1,15 @@
+*~
+*.pdf
+*.tex
+*.yang
+.DS_Store
+err.out
+auto/
+build/
+draft/
+idnits
+ox-rfc.el
+publish/draft-*.pdf
+publish/draft-*-latest-*
+test-*-xml
+test-*-json
