@@ -12,10 +12,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: checkout
+      uses: actions/checkout@v2
     - name: make
       run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+    - name: list
+      run: ls -lR
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: upload
+        path: |
+          draft/draft-*-latest.html
+          draft/draft-*-latest.txt
+          draft/draft-*-latest.xml
